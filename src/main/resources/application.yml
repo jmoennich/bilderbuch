@@ -1,0 +1,28 @@
+
+logging.level.de.cuseb: DEBUG
+
+images:
+  google:
+    enabled: false
+    key: <your google custom search key>
+    cx: <yout google custom search cx>
+
+  flickr:
+    enabled: false
+    key: <yout flickr key>
+    secret: <your flickr secret>
+
+  bing:
+    enabled: true
+    password: <your bing api password>
+
+  deviantart:
+    enabled: true
+
+  search:
+    timeout: 5
+    shuffle: true
+
+sentence:
+  # http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html
+  tags: ADJA,NN,NE

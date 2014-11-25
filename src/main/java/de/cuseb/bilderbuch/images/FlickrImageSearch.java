@@ -35,10 +35,8 @@ import java.util.List;
 @ConfigurationProperties(prefix = "images.flickr")
 public class FlickrImageSearch implements ImageSearch {
 
-    @NotBlank
     private String key;
 
-    @NotBlank
     private String secret;
 
     private boolean enabled;
