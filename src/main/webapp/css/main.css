@@ -1,0 +1,152 @@
+
+body {
+    font-family: "Helvetica Neue";
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ddddff;
+}
+
+.container-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 210px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #333;
+}
+
+.container-right {
+    position: absolute;
+    top: 0px;
+    left: 210px;
+    bottom: 0px;
+    right: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #000;
+}
+
+.slide {
+    margin: 20px 30px 20px 20px;
+    background-color: #eee;
+    background-size: cover;
+    box-shadow: 5px 5px 20px #000;
+    width: 160px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.slide.selected {
+    outline: 2px solid #ccccff;
+}
+
+.sentence {
+    font-family: "Helvetica Neue";
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #000;
+    color: #fff;
+    font-weight: 100;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.nav {
+    padding: 10px 10px 0px 20px;
+}
+
+.btn {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #eee;
+}
+
+.btn.prev {
+    background-image: url(../img/glyphicons_216_circle_arrow_left.png);
+}
+
+.btn.next {
+    background-image: url(../img/glyphicons_217_circle_arrow_right.png);
+}
+
+.btn.rec {
+    background-image: url(../img/glyphicons_300_microphone.png);
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-color: #000;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border:none;
+}
+
+.glyphicon.image-nav {
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    top: 50%;
+    margin-top: -8px;
+    padding:5px;
+    cursor: pointer;
+}
+
+.glyphicon.image-nav.left {
+    left:5px;
+}
+
+.glyphicon.image-nav.right {
+    right:5px;
+}
+
+.glyphicon-download:before {
+    content: "\e026";
+}
+
+.glyphicon-chevron-left:before {
+    content: "\e079";
+}
+
+.glyphicon-chevron-right:before {
+    content: "\e080";
+}

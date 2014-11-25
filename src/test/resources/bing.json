@@ -1,0 +1,52 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "uri": "https://api.datamarket.azure.com/Data.ashx/Bing/Search/v1/Image?Query=\u0027Test\u0027&$skip=0&$top=1",
+          "type": "ImageResult"
+        },
+        "ID": "7b0a7e80-3035-48cd-90a2-65c0737e71f1",
+        "Title": "32 Test Clip Art",
+        "MediaUrl": "http://bestclipartblog.com/clipart-pics/-test-clipart-9.jpg",
+        "SourceUrl": "http://bestclipartblog.com/32-test-clip-art.html",
+        "DisplayUrl": "bestclipartblog.com/32-test-clip-art.html",
+        "Width": "720",
+        "Height": "637",
+        "FileSize": "82523",
+        "ContentType": "image/jpeg",
+        "Thumbnail": {
+          "__metadata": {"type": "Bing.Thumbnail"},
+          "MediaUrl": "http://ts3.mm.bing.net/th?id=HN.608041810415126862&pid=15.1",
+          "ContentType": "image/jpg",
+          "Width": "300",
+          "Height": "265",
+          "FileSize": "13890"
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "https://api.datamarket.azure.com/Data.ashx/Bing/Search/v1/Image?Query=\u0027Test\u0027&$skip=1&$top=1",
+          "type": "ImageResult"
+        },
+        "ID": "975969f6-2381-4eec-a23f-96bb4e83ec9c",
+        "Title": "... test. The new findings reveal some pretty alarming statistics",
+        "MediaUrl": "http://www.citizenship-aei.org/wp-content/uploads/Testing.jpg",
+        "SourceUrl": "http://www.citizenship-aei.org/2012/04/americans-failing-citizenship-test-again/",
+        "DisplayUrl": "www.citizenship-aei.org/2012/04/americans-failing-citizenship-test...",
+        "Width": "1050",
+        "Height": "701",
+        "FileSize": "345746",
+        "ContentType": "image/jpeg",
+        "Thumbnail": {
+          "__metadata": {"type": "Bing.Thumbnail"},
+          "MediaUrl": "http://ts4.mm.bing.net/th?id=HN.607993672422131319&pid=15.1",
+          "ContentType": "image/jpg",
+          "Width": "300",
+          "Height": "200",
+          "FileSize": "7150"
+        }
+      }
+    ]
+  }
+}

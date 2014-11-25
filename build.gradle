@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.8.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'bilderbuch'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.apache.opennlp:opennlp-tools:1.5.3')
+    compile('org.apache.opennlp:opennlp-maxent:3.0.3')
+    compile('org.apache.httpcomponents:httpclient:4.3.6')
+    compile('org.apache.httpcomponents:fluent-hc:4.3.6')
+    compile('com.lowagie:itext:4.2.0')
+    compile('com.flickr4java:flickr4java:2.11')
+    compile('com.google.guava:guava:18.0')
+    compile('com.google.api-client:google-api-client:1.19.0') {
+        exclude group: 'com.google.guava'
+    }
+    compile('com.google.apis:google-api-services-customsearch:v1-rev45-1.19.0') {
+        exclude group: 'com.google.guava'
+    }
+
+    testCompile "org.codehaus.groovy:groovy-all:2.2.0"
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+    testRuntime "cglib:cglib-nodep:2.2"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}

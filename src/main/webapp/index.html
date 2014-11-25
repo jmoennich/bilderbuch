@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>Bilderbuch</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/bilderbuchApp.js"></script>
+    <script src="js/bilderbuchControllers.js"></script>
+    <script src="js/backgroundDirectives.js"></script>
+    <script src="js/speechServices.js"></script>
+</head>
+<body ng-app="bilderbuchApp" ng-controller="bilderbuchController">
+
+<div class="container-left">
+
+    <div class="nav">
+        <a href="#" ng-click="downloadPdf()" ng-show="slides.length">
+            <i class="glyphicon glyphicon-download"></i>
+            Download PDF
+        </a>
+    </div>
+
+    <div class="slide"
+         ng-repeat="slide in slides"
+         ng-click="selectSlide($index)"
+         ng-class="{selected: slide == selectedSlide}"
+         background-cover="slideImageUrl(slide)"></div>
+
+    <div class="slide" ng-click="search()">
+        <br>
+        <span class="btn rec"></span>
+        <br>
+        Record a new page.
+    </div>
+</div>
+
+<div class="container-right"
+     background-cover="slideImageUrl(selectedSlide)"
+     background-cover-load-start="loading = true"
+     background-cover-load-error="nextImage()"
+     background-cover-load-end="loading = false">
+
+    <div class="sentence" ng-bind="selectedSlide.sentence"></div>
+    <div class="loading" ng-show="loading">
+        <img src="img/ajax-loader.gif">
+    </div>
+
+    <div class="glyphicon glyphicon-chevron-left image-nav left"
+         ng-show="selectedSlide.imageIndex > 0 && selectedSlide.images"
+         ng-click="prevImage()"></div>
+
+    <div class="glyphicon glyphicon-chevron-right image-nav right"
+         ng-show="selectedSlide.imageIndex < (selectedSlide.images.length - 1) && selectedSlide.images"
+         ng-click="nextImage()"></div>
+</div>
+</body>
+</html>
